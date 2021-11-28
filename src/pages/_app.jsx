@@ -9,11 +9,11 @@ import theme from '../styles/theme';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>        
-        <title>#</title>
+      <Head>
+        <title>Damian Kłos | Front-end developer</title>
       </Head>
       <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+        <Component {...pageProps} />
         <GlobalStyles />
       </ThemeProvider>
     </>
