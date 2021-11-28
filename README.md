@@ -1,4 +1,4 @@
-# (TITLE)
+# Resume
 
 ---
 
@@ -12,7 +12,7 @@
 
 ## About The Project
 
-(DESCRIPTION)
+Resume website which showcase my projects and bio informations.
 
 ### Built With
 
