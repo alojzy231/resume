@@ -12,6 +12,24 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #888; 
+
+    }
+ 
+    ::-webkit-scrollbar-thumb {
+        background: #535353; 
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #474747; 
+    }
+
     body{
         font-family: 'Open Sans', sans-serif;
     }

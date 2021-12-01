@@ -33,7 +33,7 @@ export const typographyHeights = {
   header1: '13.3rem',
   header2: '8.3rem',
   header3: '6.7rem',
-  header4: '0.48rem',
+  header4: '4.8rem',
   header5: '3.3rem',
   header6: '2.7rem',
   paragraphBig: '2.2rem',
@@ -50,12 +50,19 @@ export const typographySpacing = {
   paragraphSmall: '0.025rem',
 };
 
+export const medias = {
+  mobile: '(max-width:690px)',
+};
+
 const theme = {
   colors,
-  typographySizes,
-  typographyWeights,
-  typographyHeights,
-  typographySpacing,
+  typography: {
+    typographySizes,
+    typographyWeights,
+    typographyHeights,
+    typographySpacing,
+  },
+  medias,
 };
 
 export default theme;
