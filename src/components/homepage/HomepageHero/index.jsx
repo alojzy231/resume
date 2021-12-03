@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import Astronaut from './Astronaut';
 import ScrollDownButton from '../../generic/ScrollDownButton';
@@ -9,17 +10,19 @@ import {
   Centered,
 } from './HomepageHero.styles';
 
-export default function HomepageHero() {
-  const ref = useRef();
-
+export default function HomepageHero({ homepageHeroRef }) {
   return (
-    <HomepageHeroContainer ref={ref}>
+    <HomepageHeroContainer ref={homepageHeroRef}>
       <Centered>
         <HomepageHeroName>Damian Kłos</HomepageHeroName>
         <HomepageHeroJobTitle>FRONT-END DEVELOPER</HomepageHeroJobTitle>
       </Centered>
-      <ScrollDownButton sectionRef={ref} />
+      <ScrollDownButton sectionRef={homepageHeroRef} />
       <Astronaut />
     </HomepageHeroContainer>
   );
 }
+
+HomepageHero.propTypes = {
+  homepageHeroRef: PropTypes.shape({}).isRequired,
+};
