@@ -17,20 +17,25 @@ const GlobalStyles = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-track {
-        background: #888; 
+        background: #535353; 
 
     }
  
     ::-webkit-scrollbar-thumb {
-        background: #535353; 
-
+        background: #888; 
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #474747; 
+        background: #747474; 
+ 
     }
 
     body{
+        display:flex;
+        justify-content: center;
+
+        background-color: ${({ theme: { colors } }) => colors.dark};
+
         font-family: 'Open Sans', sans-serif;
     }
 

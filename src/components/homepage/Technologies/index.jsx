@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 
 import ScrollDownButton from '../../generic/ScrollDownButton';
-import { AboutMeContainer } from './AboutMe.styles';
+import { TechnologiesContainer } from './Technologies.styles';
 
-export default function AboutMe() {
+export default function Technologies() {
   const ref = useRef();
   return (
-    <AboutMeContainer ref={ref}>
+    <TechnologiesContainer ref={ref}>
       test
       <ScrollDownButton sectionRef={ref} />
-    </AboutMeContainer>
+    </TechnologiesContainer>
   );
 }
