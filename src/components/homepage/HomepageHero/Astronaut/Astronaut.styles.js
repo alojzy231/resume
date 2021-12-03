@@ -2,11 +2,9 @@ import styled, { keyframes } from 'styled-components';
 
 const floatingAnimation = ({ start, end }) => keyframes`
     from{
-        transform: translate(0,0);
         transform: rotate(${start.rotateZ});
     }
     to{
-        transform: translateY(1000px);
         transform: rotate(${end.rotateZ});
     }
 `;
