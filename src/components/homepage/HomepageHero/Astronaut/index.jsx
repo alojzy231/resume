@@ -11,9 +11,9 @@ export default function Astronaut({ className }) {
       rotateZ: '0deg',
     },
     end: {
-      x: `${Math.random() * 50}%`,
-      y: `${Math.random() * 50}%`,
-      rotateZ: `${Math.random() * 120 + 30}deg`,
+      x: 0,
+      y: 0,
+      rotateZ: '0deg',
     },
   });
 
@@ -23,14 +23,15 @@ export default function Astronaut({ className }) {
     setCoordinates((prevCoordinates) => ({
       start: prevCoordinates.end,
       end: {
-        x: `${Math.random() * 50}%`,
-        y: `${Math.random() * 50}%`,
-        rotateZ: `${Math.random() * 120}deg`,
+        x: `${Math.random() * 50 + 5}%`,
+        y: `${Math.random() * 50 + 5}%`,
+        rotateZ: `${Math.random() * 120 + 30}deg`,
       },
     }));
   };
 
   useEffect(() => {
+    setNewCoordinates();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     animationInterval = setInterval(() => {
       setNewCoordinates();
