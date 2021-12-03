@@ -42,7 +42,7 @@ export const HomepageHeroJobTitle = styled.h1`
 
   @media ${({ theme: { medias } }) => medias.mobile} {
     ${Header4};
-
+    margin-top: 1.2rem;
     font-weight: 700;
   }
 `;
