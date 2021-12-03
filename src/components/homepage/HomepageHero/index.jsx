@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 
 import Astronaut from './Astronaut';
+import ScrollDownButton from '../../generic/ScrollDownButton';
 import {
   HomepageHeroContainer,
   HomepageHeroJobTitle,
   HomepageHeroName,
-  HeroScrollDownButton,
   Centered,
 } from './HomepageHero.styles';
 
@@ -18,7 +18,7 @@ export default function HomepageHero() {
         <HomepageHeroName>Damian Kłos</HomepageHeroName>
         <HomepageHeroJobTitle>FRONT-END DEVELOPER</HomepageHeroJobTitle>
       </Centered>
-      <HeroScrollDownButton sectionRef={ref} />
+      <ScrollDownButton sectionRef={ref} />
       <Astronaut />
     </HomepageHeroContainer>
   );

@@ -13,7 +13,7 @@ export default function Astronaut({ className }) {
     end: {
       x: `${Math.random() * 50}%`,
       y: `${Math.random() * 50}%`,
-      rotateZ: `${Math.random() * 120}deg`,
+      rotateZ: `${Math.random() * 120 + 30}deg`,
     },
   });
 

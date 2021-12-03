@@ -4,6 +4,12 @@ const ScrollDownButtonContainer = styled.button`
   width: 12.4rem;
 
   padding: 0;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+
   border: none;
 
   background: transparent;

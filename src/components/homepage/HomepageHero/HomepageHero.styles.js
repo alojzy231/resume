@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+
 import { Header3, Header4 } from '../../../styles/typography';
-import ScrollDownButton from '../../generic/ScrollDownButton';
 
 export const HomepageHeroContainer = styled.header`
   min-height: 100vh;
@@ -45,11 +45,4 @@ export const HomepageHeroJobTitle = styled.h1`
 
     font-weight: 700;
   }
-`;
-
-export const HeroScrollDownButton = styled(ScrollDownButton)`
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -100%);
 `;
