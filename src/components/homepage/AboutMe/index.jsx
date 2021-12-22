@@ -6,7 +6,7 @@ import { AboutMeContainer } from './AboutMe.styles';
 export default function AboutMe() {
   const ref = useRef();
   return (
-    <AboutMeContainer ref={ref}>
+    <AboutMeContainer id="about-me" ref={ref}>
       test
       <ScrollDownButton sectionRef={ref} />
     </AboutMeContainer>

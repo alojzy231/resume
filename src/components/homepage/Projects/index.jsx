@@ -6,7 +6,7 @@ import { ProjectsContainer } from './Projects.styles';
 export default function Projects() {
   const ref = useRef();
   return (
-    <ProjectsContainer ref={ref}>
+    <ProjectsContainer id="projects" ref={ref}>
       test
       <ScrollDownButton sectionRef={ref} />
     </ProjectsContainer>

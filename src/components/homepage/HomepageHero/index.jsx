@@ -12,7 +12,7 @@ import {
 
 export default function HomepageHero({ homepageHeroRef }) {
   return (
-    <HomepageHeroContainer ref={homepageHeroRef}>
+    <HomepageHeroContainer id="hero" ref={homepageHeroRef}>
       <Centered>
         <HomepageHeroName>Damian Kłos</HomepageHeroName>
         <HomepageHeroJobTitle>FRONT-END DEVELOPER</HomepageHeroJobTitle>
