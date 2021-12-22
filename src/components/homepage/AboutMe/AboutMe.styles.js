@@ -16,6 +16,7 @@ export const AboutMeContainer = styled.section`
 export const AboutMeContentContainer = styled.div`
   margin-bottom: 6.2rem;
   display: flex;
+  align-items: center;
 
   @media ${({ theme: { medias } }) => medias.tablet} {
     margin: 9.6rem 0 23.8rem;
@@ -29,8 +30,10 @@ export const AboutMeContentContainer = styled.div`
 `;
 
 export const AboutMePhoto = styled.img`
+  height: 44.8rem;
   width: 35.8rem;
   @media ${({ theme: { medias } }) => medias.mobile} {
+    height: 28.1rem;
     width: 22.5rem;
   }
 `;
