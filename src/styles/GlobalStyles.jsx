@@ -31,9 +31,6 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        display:flex;
-        justify-content: center;
-
         background-color: ${({ theme: { colors } }) => colors.dark};
 
         font-family: 'Open Sans', sans-serif;

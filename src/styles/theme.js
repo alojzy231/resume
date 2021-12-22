@@ -52,6 +52,7 @@ export const typographySpacing = {
 };
 
 export const medias = {
+  tablet: '(max-width:1200px)',
   mobile: '(max-width:690px)',
 };
 

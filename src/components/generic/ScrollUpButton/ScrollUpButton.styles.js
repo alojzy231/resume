@@ -21,7 +21,7 @@ export const ScrollUpButtonContainer = styled.button`
   z-index: ${({ isHidden }) => (isHidden ? -1 : 99)};
 
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
-  transition: 0.4s ease;
+  transition: 0.2s ease;
 
   border-radius: 50%;
   border: none;

@@ -1,4 +1,5 @@
-import { documentToReactComponents, BLOCKS, MARKS, INLINES } from 'contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
 function extractAsset(itemData, assets) {
   const assetId = itemData.sys.id;
@@ -65,7 +66,6 @@ export function convertRichTextToReactComponent(Component, richText) {
       [MARKS.UNDERLINE]: (text) => <ins>{text}</ins>,
     },
     rednerInline: {
-      // Make sure to prepare generic Hyperlink component
       // eslint-disable-next-line react/prop-types
       [INLINES.HYPERLINK]: ({ data }, text) => <a href={data.uri}>{text}</a>,
     },
