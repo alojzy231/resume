@@ -7,6 +7,11 @@ const colors = {
     darkTint10: '#696969',
     darkTint05: '#C4C4C4',
   },
+  background: {
+    aboutMeBackground: 'linear-gradient(180deg, #161616 0%, #3D3D3D 100%)',
+    technologiesBackground: 'linear-gradient(180deg, #3D3D3D 0%, #696969 100%)',
+    projectsBackground: 'linear-gradient(180deg, #696969 0%, #C4C4C4 100%)',
+  },
   gradient: 'linear-gradient(297.98deg, #CF7A68 7.86%, #B9697A 47.98%, #956184 91.6%)',
 };
 

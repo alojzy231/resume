@@ -5,7 +5,11 @@ export const ProjectsContainer = styled.section`
 
   position: relative;
 
-  background-color: ${({ theme: { colors } }) => colors.darkTint.darkTint05};
+  background: ${({
+    theme: {
+      colors: { background },
+    },
+  }) => background.projectsBackground};
 `;
 
 export const ProjectsTitle = styled.h1``;

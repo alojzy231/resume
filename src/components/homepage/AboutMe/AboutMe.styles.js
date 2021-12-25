@@ -11,7 +11,11 @@ export const AboutMeContainer = styled.section`
   justify-content: center;
   position: relative;
 
-  background-color: ${({ theme: { colors } }) => colors.darkTint.darkTint20};
+  background: ${({
+    theme: {
+      colors: { background },
+    },
+  }) => background.aboutMeBackground};
 `;
 export const AboutMeContentContainer = styled.div`
   margin-bottom: 6.2rem;

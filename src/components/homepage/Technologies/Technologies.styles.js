@@ -5,7 +5,11 @@ export const TechnologiesContainer = styled.section`
 
   position: relative;
 
-  background-color: ${({ theme: { colors } }) => colors.darkTint.darkTint10};
+  background: ${({
+    theme: {
+      colors: { background },
+    },
+  }) => background.technologiesBackground};
 `;
 
 export const TechnologiesTitle = styled.h1``;
