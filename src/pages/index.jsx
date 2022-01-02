@@ -14,15 +14,18 @@ import mapData from '../clients/contentful/dataMapper';
 export async function getStaticProps() {
   const resJson = await getPagesData();
   const pageData = mapData(resJson);
-
   return {
     props: {
-      pageData: { aboutMeSectionData: pageData.aboutMe[0] },
+      pageData: {
+        aboutMeSectionData: pageData.aboutMe[0],
+        projects: pageData.projects,
+        contactMeData: pageData.contact[0],
+      },
     },
   };
 }
 
-export default function Homepage({ pageData: { aboutMeSectionData } }) {
+export default function Homepage({ pageData: { aboutMeSectionData, contactMeData } }) {
   const homepageHeroRef = useRef();
   return (
     <HomepageContainer>
@@ -31,7 +34,7 @@ export default function Homepage({ pageData: { aboutMeSectionData } }) {
       <AboutMe data={aboutMeSectionData} />
       <Technologies />
       <Projects />
-      <ContactMe />
+      <ContactMe data={contactMeData} />
     </HomepageContainer>
   );
 }
@@ -39,5 +42,6 @@ export default function Homepage({ pageData: { aboutMeSectionData } }) {
 Homepage.propTypes = {
   pageData: PropTypes.shape({
     aboutMeSectionData: PropTypes.shape({}).isRequired,
+    contactMeData: PropTypes.shape({}).isRequired,
   }).isRequired,
 };
