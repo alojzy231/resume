@@ -5,6 +5,7 @@ import { Header4, ParagraphBig } from '../../../styles/typography';
 export const AboutMeContainer = styled.section`
   min-height: 100vh;
   width: 100%;
+  padding-bottom: 15rem;
 
   display: flex;
   align-items: center;
@@ -16,9 +17,11 @@ export const AboutMeContainer = styled.section`
       colors: { background },
     },
   }) => background.aboutMeBackground};
+  @media ${({ theme: { medias } }) => medias.mobile} {
+    padding-bottom: 6.6rem;
+  }
 `;
 export const AboutMeContentContainer = styled.div`
-  margin-bottom: 6.2rem;
   display: flex;
   align-items: center;
 

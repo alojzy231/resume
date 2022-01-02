@@ -7,16 +7,13 @@ import {
   HomepageHeroContainer,
   HomepageHeroJobTitle,
   HomepageHeroName,
-  Centered,
 } from './HomepageHero.styles';
 
 export default function HomepageHero({ homepageHeroRef }) {
   return (
     <HomepageHeroContainer id="hero" ref={homepageHeroRef}>
-      <Centered>
-        <HomepageHeroName>Damian Kłos</HomepageHeroName>
-        <HomepageHeroJobTitle>FRONT-END DEVELOPER</HomepageHeroJobTitle>
-      </Centered>
+      <HomepageHeroName>Damian Kłos</HomepageHeroName>
+      <HomepageHeroJobTitle>FRONT-END DEVELOPER</HomepageHeroJobTitle>
       <ScrollDownButton sectionRef={homepageHeroRef} />
       <Astronaut />
     </HomepageHeroContainer>

@@ -4,18 +4,21 @@ import { Header3, Header4 } from '../../../styles/typography';
 
 export const HomepageHeroContainer = styled.header`
   min-height: 100vh;
+  padding-bottom: 15rem;
+
   position: relative;
 
-  background-color: ${({ theme: { colors } }) => colors.dark};
-  overflow: hidden;
-`;
-
-export const Centered = styled.div`
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: ${({ theme: { colors } }) => colors.dark};
+  overflow: hidden;
+
+  @media ${({ theme: { medias } }) => medias.mobile} {
+    padding-bottom: 6.6rem;
+  }
 `;
 export const HomepageHeroName = styled.h1`
   margin: 0 2rem;
