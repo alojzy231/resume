@@ -4,6 +4,7 @@ const colors = {
   white: '#FFFFFF',
   darkTint: {
     darkTint20: '#3D3D3D',
+    darkTint15: '#515151',
     darkTint10: '#696969',
     darkTint05: '#C4C4C4',
   },
