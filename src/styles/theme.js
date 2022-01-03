@@ -2,6 +2,8 @@ const colors = {
   dark: '#161616',
   primary: '#CF7A68',
   white: '#FFFFFF',
+  success: '#7AC142',
+  error: '#A90000',
   darkTint: {
     darkTint20: '#3D3D3D',
     darkTint15: '#515151',

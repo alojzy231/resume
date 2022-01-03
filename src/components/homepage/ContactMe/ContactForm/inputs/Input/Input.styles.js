@@ -7,6 +7,11 @@ export const InputContainer = styled.div`
   width: 31rem;
 
   position: relative;
+
+  @media ${({ theme: { medias } }) => medias.mobile} {
+    height: 3.2rem;
+    width: 18.1rem;
+  }
 `;
 
 export const StyledInput = styled.input`

@@ -11,6 +11,13 @@ const ContactFormContainer = styled.form`
 
   border-radius: 1.9rem;
   background-color: ${({ theme: { colors } }) => colors.darkTint.darkTint15};
+
+  @media ${({ theme: { medias } }) => medias.mobile} {
+    height: 67rem;
+    min-width: 24.8rem;
+    width: 80%;
+    padding: 3.2rem 3rem;
+  }
 `;
 
 export default ContactFormContainer;

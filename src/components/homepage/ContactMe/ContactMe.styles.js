@@ -4,7 +4,7 @@ import { Header4, ParagraphBig } from '../../../styles/typography';
 
 export const ContactMeContainer = styled.section`
   min-height: 100vh;
-  padding: 0 3rem;
+  padding: 0 3rem 9.7rem;
 
   display: flex;
   align-items: center;
@@ -26,8 +26,9 @@ export const ContactMeTextContent = styled.div`
   margin-right: 4.8rem;
 
   @media ${({ theme: { medias } }) => medias.mobile} {
-    width: 24.8rem;
-    margin-right: 0;
+    min-width: 24.8rem;
+    width: 80%;
+    margin: 2rem 0;
   }
 `;
 
