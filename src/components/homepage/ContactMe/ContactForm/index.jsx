@@ -5,7 +5,7 @@ import Input from './inputs/Input';
 import SubmitButton from './inputs/SubmitButton';
 import TextArea from './inputs/Textarea';
 
-export default function index() {
+export default function ContactForm() {
   return (
     <ContactFormContainer>
       <Input placeholder="Name" />
