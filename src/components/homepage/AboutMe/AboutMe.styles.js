@@ -17,6 +17,9 @@ export const AboutMeContainer = styled.section`
       colors: { background },
     },
   }) => background.aboutMeBackground};
+  @media ${({ theme: { medias } }) => medias.tablet} {
+    padding-bottom: 0;
+  }
   @media ${({ theme: { medias } }) => medias.mobile} {
     padding-bottom: 6.6rem;
   }
