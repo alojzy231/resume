@@ -6,6 +6,8 @@ export const InputContainer = styled.div`
   height: 3.7rem;
   width: 31rem;
 
+  margin-top: 4rem;
+
   position: relative;
 
   @media ${({ theme: { medias } }) => medias.mobile} {
@@ -24,12 +26,14 @@ export const StyledInput = styled.input`
 
   ${Header6};
 
-  color: ${({ theme: { colors } }) => colors.darkTint.darkTint05};
+  color: ${({ disabled, theme: { colors } }) =>
+    disabled ? colors.darkTint.darkTint10 : colors.darkTint.darkTint05};
 
   background-color: transparent;
   border-radius: 1.9rem;
 
-  border-color: ${({ theme: { colors } }) => colors.darkTint.darkTint05};
+  border-color: ${({ disabled, theme: { colors } }) =>
+    disabled ? colors.darkTint.darkTint10 : colors.darkTint.darkTint05};
   border-width: 0.4rem;
   border-style: solid;
 

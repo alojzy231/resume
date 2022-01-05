@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import { Header4, ParagraphBig } from '../../../styles/typography';
+import { Header3, Header4, Header5, ParagraphBig } from '../../../styles/typography';
 
 export const ContactMeContainer = styled.section`
   min-height: 100vh;
-  padding: 0 3rem 9.7rem;
+  padding: 2rem 3rem 9.7rem;
 
   display: flex;
   align-items: center;
@@ -35,6 +35,11 @@ export const ContactMeTextContent = styled.div`
 export const ContactMeTitle = styled.h2`
   color: ${({ theme: { colors } }) => colors.white};
 
+  @media ${({ theme: { medias } }) => medias.tablet} {
+    ${Header3};
+    font-weight: 700;
+  }
+
   @media ${({ theme: { medias } }) => medias.mobile} {
     ${Header4};
     font-weight: 700;
@@ -44,6 +49,10 @@ export const ContactMeTitle = styled.h2`
 export const ContactMeDescription = styled.h4`
   margin-top: 1.6rem;
   color: ${({ theme: { colors } }) => colors.white};
+
+  @media ${({ theme: { medias } }) => medias.tablet} {
+    ${Header5};
+  }
 
   @media ${({ theme: { medias } }) => medias.mobile} {
     ${ParagraphBig};

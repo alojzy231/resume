@@ -6,6 +6,8 @@ export const TextareaContainer = styled.div`
   height: 36.5rem;
   width: 100%;
 
+  margin-top: 4rem;
+
   position: relative;
 `;
 
@@ -19,12 +21,14 @@ export const StyledTextarea = styled.textarea`
 
   ${Header6};
 
-  color: ${({ theme: { colors } }) => colors.darkTint.darkTint05};
+  color: ${({ disabled, theme: { colors } }) =>
+    disabled ? colors.darkTint.darkTint10 : colors.darkTint.darkTint05};
 
   background-color: transparent;
   border-radius: 1.9rem;
 
-  border-color: ${({ theme: { colors } }) => colors.darkTint.darkTint05};
+  border-color: ${({ disabled, theme: { colors } }) =>
+    disabled ? colors.darkTint.darkTint10 : colors.darkTint.darkTint05};
   border-width: 0.4rem;
   border-style: solid;
 

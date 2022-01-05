@@ -29,8 +29,8 @@ const selectSubmitButtonStyling = (state) => {
 
 const StyledSubmitButton = styled.button`
   height: 4.2rem;
-  width: fit-content;
-  margin-left: auto;
+
+  margin: 4rem 0 2rem auto;
   padding: 0.5rem 3.1rem;
 
   ${Header5};
@@ -54,6 +54,7 @@ const StyledSubmitButton = styled.button`
 
   @media ${({ theme: { medias } }) => medias.mobile} {
     height: 3.2rem;
+
     padding: 0.125rem 2.4rem;
 
     ${ParagraphBig};

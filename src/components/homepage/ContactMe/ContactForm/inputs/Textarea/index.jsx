@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Placeholder from '../Placeholder';
 import { TextareaContainer, StyledTextarea } from './TextArea.styles';
 
-export default function Textarea({ placeholder }) {
+export default function Textarea({ placeholder, disabled }) {
   const [value, setValue] = useState('');
   const [isFilled, toggleIsFilled] = useState(false);
 
@@ -16,8 +16,8 @@ export default function Textarea({ placeholder }) {
 
   return (
     <TextareaContainer>
-      <StyledTextarea value={value} onChange={handleChange} />
-      <Placeholder isFilled={isFilled} isTextarea>
+      <StyledTextarea value={value} onChange={handleChange} disabled={disabled} />
+      <Placeholder isFilled={isFilled} disabled={disabled} isTextarea>
         {placeholder}
       </Placeholder>
     </TextareaContainer>
@@ -26,8 +26,10 @@ export default function Textarea({ placeholder }) {
 
 Textarea.propTypes = {
   placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 Textarea.defaultProps = {
   placeholder: '',
+  disabled: false,
 };

@@ -34,7 +34,8 @@ const Placeholder = styled.div`
 
   ${Header6};
 
-  color: ${({ theme: { colors } }) => colors.darkTint.darkTint05};
+  color: ${({ disabled, theme: { colors } }) =>
+    disabled ? colors.darkTint.darkTint10 : colors.darkTint.darkTint05};
   user-select: none;
 
   transition: ease 0.2s;

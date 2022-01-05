@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Placeholder from '../Placeholder';
 import { InputContainer, StyledInput } from './Input.styles';
 
-export default function Input({ placeholder }) {
+export default function Input({ placeholder, disabled }) {
   const [value, setValue] = useState('');
   const [isFilled, toggleIsFilled] = useState(false);
 
@@ -16,16 +16,20 @@ export default function Input({ placeholder }) {
 
   return (
     <InputContainer>
-      <StyledInput value={value} onChange={handleChange} />
-      <Placeholder isFilled={isFilled}>{placeholder}</Placeholder>
+      <StyledInput value={value} onChange={handleChange} disabled={disabled} />
+      <Placeholder isFilled={isFilled} disabled={disabled}>
+        {placeholder}
+      </Placeholder>
     </InputContainer>
   );
 }
 
 Input.propTypes = {
   placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 Input.defaultProps = {
   placeholder: '',
+  disabled: false,
 };
