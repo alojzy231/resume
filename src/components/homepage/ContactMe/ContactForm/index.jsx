@@ -40,7 +40,6 @@ export default function ContactForm() {
     } else {
       setFormInputsValues(INITIAL_FORM_INPUTS_VALUES);
       setSubmitButtonState(SUBMIT_BUTTON_STATE.default);
-      // setIsFormDisabled(false);
     }
   };
 

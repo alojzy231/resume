@@ -56,6 +56,7 @@ const StyledSubmitButton = styled.button`
     height: 3.2rem;
 
     padding: 0.125rem 2.4rem;
+    margin: 2rem 0;
 
     ${ParagraphBig};
     font-weight: 700;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header6 } from '../../../../../../styles/typography';
+import { Header6, ParagraphBig } from '../../../../../../styles/typography';
 
 export const InputContainer = styled.div`
   height: 3.7rem;
@@ -50,6 +50,11 @@ export const StyledInput = styled.input`
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
     transition: background-color 5000s;
-    -webkit-text-fill-color: #fff !important;
+    -webkit-text-fill-color: ${({ disabled, theme: { colors } }) =>
+      disabled ? colors.darkTint.darkTint10 : colors.darkTint.darkTint05} !important;
+  }
+
+  @media ${({ theme: { medias } }) => medias.mobile} {
+    ${ParagraphBig};
   }
 `;

@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 
 export const LoaderContainer = styled.div`
   display: flex;
+  width: 4.8rem;
+  margin: 0 auto;
 `;
 
 const floatinDotAnimation = keyframes`
