@@ -44,4 +44,12 @@ export const StyledInput = styled.input`
 
     border-color: ${({ theme: { colors } }) => colors.white};
   }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #fff !important;
+  }
 `;
