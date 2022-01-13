@@ -22,4 +22,9 @@ const sendForm = (data, callback) => {
     });
 };
 
+export const sendFormMockup = (_, callback) => {
+  callback(SUBMIT_BUTTON_STATE.loading);
+  setTimeout(() => callback(SUBMIT_BUTTON_STATE.success), 1000);
+};
+
 export default sendForm;

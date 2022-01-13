@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import Placeholder from '../Placeholder';
+import Placeholder, { Required } from '../Placeholder';
 import { InputContainer, StyledInput } from './Input.styles';
 
-export default function Input({ placeholder, disabled, value, onChange, name }) {
+export default function Input({
+  placeholder,
+  disabled,
+  required,
+  value,
+  onChange,
+  name,
+  isInvalid,
+}) {
   const [isFilled, setIsFilled] = useState(false);
 
   useEffect(() => {
@@ -13,9 +21,16 @@ export default function Input({ placeholder, disabled, value, onChange, name }) 
 
   return (
     <InputContainer>
-      <StyledInput value={value} onChange={onChange} disabled={disabled} name={name} />
+      <StyledInput
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
+        name={name}
+        isInvalid={isInvalid}
+      />
       <Placeholder isFilled={isFilled} disabled={disabled}>
         {placeholder}
+        {required && <Required />}
       </Placeholder>
     </InputContainer>
   );
@@ -24,15 +39,19 @@ export default function Input({ placeholder, disabled, value, onChange, name }) 
 Input.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
+  required: PropTypes.bool,
   value: PropTypes.string,
   onChange: PropTypes.func,
   name: PropTypes.string,
+  isInvalid: PropTypes.bool,
 };
 
 Input.defaultProps = {
   placeholder: '',
   disabled: false,
+  required: false,
   value: '',
   onChange: () => {},
   name: '',
+  isInvalid: false,
 };

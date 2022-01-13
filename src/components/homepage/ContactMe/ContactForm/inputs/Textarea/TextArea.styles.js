@@ -32,6 +32,8 @@ export const StyledTextarea = styled.textarea`
   border-width: 0.4rem;
   border-style: solid;
 
+  ${({ isInvalid, theme: { colors } }) => isInvalid && ` border-color: ${colors.error}`};
+
   outline: none;
 
   resize: none;

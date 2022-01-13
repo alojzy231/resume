@@ -2,6 +2,13 @@ import styled, { css } from 'styled-components';
 
 import { Header6 } from '../../../../../styles/typography';
 
+export const Required = styled.span`
+  color: ${({ theme: { colors } }) => colors.error};
+  &::after {
+    content: '*';
+  }
+`;
+
 const inputPlaceholderWhenNotFilled = css`
   bottom: 50%;
   left: 50%;
