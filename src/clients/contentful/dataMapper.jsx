@@ -1,6 +1,8 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
+import { Link } from './CustomElemenst.styles';
+
 function extractAsset(itemData, assets) {
   const assetId = itemData.sys.id;
   const asset = assets.find((collectionAsset) => collectionAsset.sys.id === assetId);
@@ -59,15 +61,13 @@ export function convertRichTextToReactComponent(Component, richText) {
       ),
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <Component>{children}</Component>,
+      // eslint-disable-next-line react/prop-types
+      [INLINES.HYPERLINK]: ({ data }, text) => <Link href={data.uri}>{text}</Link>,
     },
     renderMark: {
       [MARKS.BOLD]: (text) => <b>{text}</b>,
       [MARKS.ITALIC]: (text) => <i>{text}</i>,
       [MARKS.UNDERLINE]: (text) => <ins>{text}</ins>,
-    },
-    rednerInline: {
-      // eslint-disable-next-line react/prop-types
-      [INLINES.HYPERLINK]: ({ data }, text) => <a href={data.uri}>{text}</a>,
     },
   };
   return documentToReactComponents(richText, options);
