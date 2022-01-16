@@ -40,7 +40,7 @@ export default function Homepage({ pageData: { aboutMeSectionData, projects, con
 Homepage.propTypes = {
   pageData: PropTypes.shape({
     aboutMeSectionData: PropTypes.shape({}).isRequired,
-    projects: PropTypes.shape({}).isRequired,
+    projects: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     contactMeData: PropTypes.shape({}).isRequired,
   }).isRequired,
 };
