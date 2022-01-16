@@ -24,14 +24,14 @@ export async function getStaticProps() {
   };
 }
 
-export default function Homepage({ pageData: { aboutMeSectionData, contactMeData } }) {
+export default function Homepage({ pageData: { aboutMeSectionData, projects, contactMeData } }) {
   const homepageHeroRef = useRef();
   return (
     <HomepageContainer>
       <ScrollUpButton homepageHeroRef={homepageHeroRef} />
       <HomepageHero homepageHeroRef={homepageHeroRef} />
       <AboutMe data={aboutMeSectionData} />
-      <Projects />
+      <Projects projects={projects} />
       <ContactMe data={contactMeData} />
     </HomepageContainer>
   );
@@ -40,6 +40,7 @@ export default function Homepage({ pageData: { aboutMeSectionData, contactMeData
 Homepage.propTypes = {
   pageData: PropTypes.shape({
     aboutMeSectionData: PropTypes.shape({}).isRequired,
+    projects: PropTypes.shape({}).isRequired,
     contactMeData: PropTypes.shape({}).isRequired,
   }).isRequired,
 };
