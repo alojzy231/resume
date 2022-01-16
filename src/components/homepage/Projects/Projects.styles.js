@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
+import { Header2 } from '../../../styles/typography';
+
 export const ProjectsContainer = styled.section`
   min-height: 100vh;
-  padding-bottom: 15rem;
+  padding: 3rem 0 15rem;
 
   position: relative;
 
@@ -17,4 +19,13 @@ export const ProjectsContainer = styled.section`
   }
 `;
 
-export const ProjectsTitle = styled.h1``;
+export const ProjectsTitle = styled.h1`
+  margin-bottom: 4rem;
+  color: ${({ theme: { colors } }) => colors.white};
+  text-align: center;
+  @media ${({ theme: { medias } }) => medias.mobile} {
+    margin-bottom: 1rem;
+    ${Header2};
+    font-weight: 800;
+  }
+`;
