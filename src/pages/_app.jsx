@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Damian Kłos | Front-end developer</title>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
       </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />

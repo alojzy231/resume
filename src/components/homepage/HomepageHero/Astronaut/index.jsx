@@ -52,6 +52,7 @@ export default function Astronaut({ className }) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       coordinates={coordinates}
+      alt="Space icons created by Freepik - Flaticon https://www.flaticon.com/free-icons/space"
     >
       <path
         d="M134.979 51.085C135.445 52.53 135.825 54.016 136.109 55.5C136.475 57.416 138.152 58.749 140.033 58.749C140.283 58.749 140.536 58.726 140.79 58.677C142.96 58.262 144.382 56.166 143.967 53.996C143.621 52.191 143.159 50.386 142.593 48.63C141.916 46.528 139.665 45.371 137.559 46.051C135.455 46.729 134.3 48.983 134.979 51.085Z"
