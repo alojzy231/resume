@@ -48,9 +48,13 @@ export const AboutMePhoto = styled.img`
   }
 `;
 
+export const AboutMeLeftContent = styled.div`
+  position: relative;
+`;
+
 export const AboutMeTextContainer = styled.div`
-  width: 63.3rem;
-  margin-left: 13.6rem;
+  width: 66.1rem;
+  margin-left: 8rem;
 
   @media ${({ theme: { medias } }) => medias.tablet} {
     margin: 0 0 9rem;
