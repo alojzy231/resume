@@ -19,6 +19,7 @@ Resume website which showcase my projects and bio informations.
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org)
 - [StyledComponents](https://styled-components.com/)
+- [Swiper](https://swiperjs.com/)
 
 ### Installation
 
