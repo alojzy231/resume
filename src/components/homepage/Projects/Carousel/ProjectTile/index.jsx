@@ -8,7 +8,9 @@ import {
   ProjectTileContent,
   ProjectTileTitle,
   ProjectTileDescription,
-  ProjectTileLink,
+  ProjectTileLinksRow,
+  ProjectTileDemoLink,
+  ProjectTileGithubLink,
   ProjectTileContentTopRow,
   ProjectTileTechnologiesSection,
   ProjectTileTechnology,
@@ -19,7 +21,8 @@ export default function ProjectTile({ projectData }) {
     projectName,
     projectDescription,
     projectImage: { url: imageUrl },
-    projectLink,
+    projectDemoLink,
+    projectGithubLink,
     usedTechnologies,
   } = projectData;
 
@@ -37,7 +40,10 @@ export default function ProjectTile({ projectData }) {
           </ProjectTileTechnologiesSection>
         </ProjectTileContentTopRow>
         {Description}
-        <ProjectTileLink href={projectLink}>Visit project</ProjectTileLink>
+        <ProjectTileLinksRow>
+          <ProjectTileGithubLink href={projectGithubLink} />
+          <ProjectTileDemoLink href={projectDemoLink}>Visit demo</ProjectTileDemoLink>
+        </ProjectTileLinksRow>
       </ProjectTileContent>
     </ProjectTileContainer>
   );
@@ -50,7 +56,8 @@ ProjectTile.propTypes = {
     projectImage: PropTypes.shape({
       url: PropTypes.string.isRequired,
     }).isRequired,
-    projectLink: PropTypes.string.isRequired,
+    projectDemoLink: PropTypes.string.isRequired,
+    projectGithubLink: PropTypes.string.isRequired,
     usedTechnologies: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };

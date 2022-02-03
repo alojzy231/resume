@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { Header4, Header6, ParagraphBig, ParagraphSmall } from '../../../../../styles/typography';
+
+import { Header4, Header5, ParagraphBig, ParagraphSmall } from '../../../../../styles/typography';
+import ProjectTileGithubIcon from './ProjectTileGithubIcon';
 
 export const ProjectTileContainer = styled.div`
   margin: 3.2rem 12.8rem 6.4rem;
@@ -67,20 +69,29 @@ export const ProjectTileTechnology = styled.div`
 `;
 export const ProjectTileDescription = styled.h5`
   @media ${({ theme: { medias } }) => medias.tablet} {
-    ${Header6};
+    ${Header5};
   }
 `;
-export const ProjectTileLink = styled.a`
+
+export const ProjectTileLinksRow = styled.div`
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ProjectTileDemoLink = styled.a`
   width: fit-content;
-  margin: 2rem 0 0 auto;
-  padding: 1rem;
+  height: 5.3rem;
+
+  padding: 1rem 1.5rem;
 
   display: block;
 
-  ${Header6};
+  ${Header5};
   color: ${({ theme: { colors } }) => colors.white};
   text-decoration: none;
-  border-radius: 1.6rem;
+  border-radius: 2.65rem;
 
   background-color: ${({ theme: { colors } }) => colors.darkTint.darkTint20};
 
@@ -93,6 +104,32 @@ export const ProjectTileLink = styled.a`
   }
 
   @media ${({ theme: { medias } }) => medias.tablet} {
+    height: 4.2rem;
+    border-radius: 2.1rem;
+
     ${ParagraphBig};
+  }
+`;
+
+export const ProjectTileGithubLink = styled(ProjectTileGithubIcon)`
+  width: 6.4rem;
+  height: 6.4rem;
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media ${({ theme: { medias } }) => medias.tablet} {
+    width: 4.8rem;
+    height: 4.8rem;
   }
 `;
