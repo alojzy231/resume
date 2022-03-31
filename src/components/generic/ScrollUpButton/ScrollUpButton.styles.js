@@ -21,7 +21,7 @@ export const ScrollUpButtonContainer = styled.button`
   z-index: ${({ isHidden }) => (isHidden ? -1 : 99)};
 
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
-  transition: 0.2s ease;
+  transition: transform 0.2s ease;
 
   border-radius: 50%;
   border: none;
@@ -31,14 +31,14 @@ export const ScrollUpButtonContainer = styled.button`
 
   &:hover {
     cursor: pointer;
-    opacity: 0.8;
+    filter: brightness(70%);
     ${RocketIconFlame} {
       animation: ${flameAnimation} 500ms infinite linear;
     }
   }
 
   &:active {
-    opacity: 0.6;
+    filter: brightness(60%);
   }
 
   @media ${({ theme: { medias } }) => medias.mobile} {

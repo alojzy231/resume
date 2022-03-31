@@ -26,11 +26,11 @@ export const SocialButtonLinkContainer = styled.a`
 
   &:hover {
     cursor: pointer;
-    opacity: 0.8;
+    filter: brightness(140%);
   }
 
   &:active {
-    opacity: 0.6;
+    filter: brightness(160%);
   }
 
   @media ${({ theme: { medias } }) => medias.mobile} {
