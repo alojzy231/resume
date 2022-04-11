@@ -19,6 +19,7 @@ export const StyledTextarea = styled.textarea`
   position: relative;
   z-index: 1;
 
+  font-family: inherit;
   ${Header6};
 
   color: ${({ disabled, theme: { colors } }) =>
