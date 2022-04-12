@@ -11,8 +11,9 @@ export const Required = styled.span`
 
 const inputPlaceholderWhenNotFilled = css`
   bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  left: 1.5rem;
+
+  transform: translateY(50%);
 `;
 
 const textareaPlaceholderWhenNotFilled = css`
