@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header2 } from '../../../styles/typography';
+import { Header1, Header3 } from '../../../styles/typography';
 
 export const ProjectsContainer = styled.section`
   min-height: 100vh;
@@ -19,13 +19,16 @@ export const ProjectsContainer = styled.section`
   }
 `;
 
-export const ProjectsTitle = styled.h1`
+export const ProjectsTitle = styled.h2`
   margin-bottom: 4rem;
-  color: ${({ theme: { colors } }) => colors.white};
+
+  ${Header1};
   text-align: center;
+
+  color: ${({ theme: { colors } }) => colors.white};
   @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 1rem;
-    ${Header2};
+    ${Header3};
     font-weight: 800;
   }
 `;

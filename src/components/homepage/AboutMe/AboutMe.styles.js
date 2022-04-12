@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header4, ParagraphBig } from '../../../styles/typography';
+import { Header1, Header3, ParagraphBig } from '../../../styles/typography';
 
 export const AboutMeContainer = styled.section`
   min-height: 100vh;
@@ -66,12 +66,14 @@ export const AboutMeTextContainer = styled.div`
     margin-bottom: 1.5rem;
   }
 `;
-export const AboutMeTitle = styled.h1`
+export const AboutMeTitle = styled.h2`
+  ${Header1};
+
   color: ${({ theme: { colors } }) => colors.white};
 
   @media ${({ theme: { medias } }) => medias.mobile} {
-    ${Header4};
-    font-weight: 700;
+    ${Header3};
+    font-weight: 800;
   }
 `;
 export const AboutMeDescription = styled.h4`
