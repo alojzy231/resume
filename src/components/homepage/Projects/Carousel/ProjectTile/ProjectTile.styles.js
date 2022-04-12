@@ -29,14 +29,6 @@ export const ProjectTileContent = styled.div`
   margin: 0 3.2rem;
 `;
 
-export const ProjectTileContentTopRow = styled.div`
-  display: flex;
-  align-items: flex-end;
-
-  @media ${({ theme: { medias } }) => medias.mobile} {
-    flex-direction: column;
-  }
-`;
 export const ProjectTileTitle = styled.h3`
   @media ${({ theme: { medias } }) => medias.tablet} {
     margin-right: auto;
@@ -45,16 +37,10 @@ export const ProjectTileTitle = styled.h3`
   }
 `;
 export const ProjectTileTechnologiesSection = styled.div`
-  width: 40%;
+  width: 100%;
   margin-left: auto;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
-
-  @media ${({ theme: { medias } }) => medias.mobile} {
-    width: auto;
-    justify-content: flex-start;
-  }
 `;
 export const ProjectTileTechnology = styled.div`
   margin: 1rem;

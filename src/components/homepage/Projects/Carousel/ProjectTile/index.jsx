@@ -11,7 +11,6 @@ import {
   ProjectTileLinksRow,
   ProjectTileDemoLink,
   ProjectTileGithubLink,
-  ProjectTileContentTopRow,
   ProjectTileTechnologiesSection,
   ProjectTileTechnology,
 } from './ProjectTile.styles';
@@ -31,14 +30,13 @@ export default function ProjectTile({ projectData }) {
     <ProjectTileContainer>
       <ProjectTileImage imageUrl={`https:${imageUrl}`} />
       <ProjectTileContent>
-        <ProjectTileContentTopRow>
-          <ProjectTileTitle>{projectName}</ProjectTileTitle>
-          <ProjectTileTechnologiesSection>
-            {usedTechnologies.map((technologyName) => (
-              <ProjectTileTechnology key={technologyName}>{technologyName}</ProjectTileTechnology>
-            ))}
-          </ProjectTileTechnologiesSection>
-        </ProjectTileContentTopRow>
+        <ProjectTileTitle>{projectName}</ProjectTileTitle>
+        <ProjectTileTechnologiesSection>
+          {usedTechnologies.map((technologyName) => (
+            <ProjectTileTechnology key={technologyName}>{technologyName}</ProjectTileTechnology>
+          ))}
+        </ProjectTileTechnologiesSection>
+
         {Description}
         <ProjectTileLinksRow>
           <ProjectTileGithubLink href={projectGithubLink} />
