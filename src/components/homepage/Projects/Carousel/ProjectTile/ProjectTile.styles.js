@@ -38,7 +38,7 @@ export const ProjectTileTitle = styled.h3`
 `;
 export const ProjectTileTechnologiesSection = styled.div`
   width: 100%;
-  margin-left: auto;
+  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
 `;
@@ -55,7 +55,7 @@ export const ProjectTileTechnology = styled.div`
 `;
 export const ProjectTileDescription = styled.h5`
   @media ${({ theme: { medias } }) => medias.tablet} {
-    ${Header5};
+    ${ParagraphBig};
   }
 `;
 
